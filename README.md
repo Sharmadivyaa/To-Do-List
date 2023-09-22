@@ -16,8 +16,6 @@ def add_task():
     with open("todo.txt", "a") as file:
         file.write(task + "\n")
     print(f"Task '{task}' added to your To-Do list.")
-
-# Function to mark a task as done
 def mark_done():
     display_todo_list()
     task_number = int(input("Enter the task number to mark as done: ")) - 1
