@@ -2,7 +2,6 @@
 A To-Do List application is a useful project that helps users manage and organize their tasks efficiently. This project aims to create a command-line or GUI-based application using Python, allowing  users to create, update, and track their to-do lists
 import os
 
-# Function to display the To-Do list
 def display_todo_list():
     with open("todo.txt", "r") as file:
         tasks = file.readlines()
@@ -12,8 +11,6 @@ def display_todo_list():
             print("Your To-Do List:")
             for i, task in enumerate(tasks, start=1):
                 print(f"{i}. {task.strip()}")
-
-# Function to add a task to the To-Do list
 def add_task():
     task = input("Enter the task to add: ")
     with open("todo.txt", "a") as file:
@@ -33,8 +30,6 @@ def mark_done():
         print(f"Task '{done_task.strip()}' marked as done.")
     else:
         print("Invalid task number.")
-
-# Main program loop
 while True:
     print("\nOptions:")
     print("1. Display To-Do List")
